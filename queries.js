@@ -18,8 +18,13 @@ const getMedicosPorEspecialidade = (especialidade) => {
   );
 };
 
+const getMedicoPorId = (id) => {
+  return db.promise().query('SELECT * FROM medicos WHERE id = ?', [id]);
+};
+
 module.exports = {
   getMedicos,
   getMedicosPorNome,
-  getMedicosPorEspecialidade
+  getMedicosPorEspecialidade,
+  getMedicoPorId
 };
