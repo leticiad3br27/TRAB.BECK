@@ -1,3 +1,9 @@
+// GET http://localhost:9000/medicos                # Buscar todos os médicos
+// GET http://localhost:9000/medicos?nome=João      # Buscar médico por nome
+// GET http://localhost:9000/medicos?especialidade=Cardiologista  # Buscar médicos por especialidade
+// GET http://localhost:9000/medicos/1              # Buscar médico por ID
+
+
 const express = require('express');
 const { getMedicos, getMedicosPorNome, getMedicosPorEspecialidade, getMedicoPorId } = require('./servico/queries.js');
 const app = express();
